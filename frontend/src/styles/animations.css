@@ -1,0 +1,123 @@
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 1s ease-in-out;
+}
+
+.slide-left {
+  animation: slideLeft 1s ease-in-out;
+}
+
+.slide-right {
+  animation: slideRight 1s ease-in-out;
+}
+
+.zoom-in {
+  animation: zoomIn 0.8s ease-in-out;
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.float {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+@keyframes slideUp {
+
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes slideLeft {
+
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes slideRight {
+
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes zoomIn {
+
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+@keyframes rotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes floating {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}

@@ -1,0 +1,47 @@
+va.process-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.process-card {
+  background: #141d33;
+  border: 1px solid #2a3550;
+  border-radius: 12px;
+  padding: 35px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.process-card:hover {
+  transform: translateY(-10px);
+  border-color: #b8975a;
+}
+
+.process-number {
+  font-size: 70px;
+  font-weight: bold;
+  color: rgba(184, 151, 90, 0.15);
+  margin-bottom: 20px;
+}
+
+.process-card h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #b8975a;
+}
+
+.process-card p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+
+  .process-container {
+    grid-template-columns: 1fr;
+  }
+
+}

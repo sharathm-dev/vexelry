@@ -1,0 +1,189 @@
+.clients-section{
+  background:#0f1628;
+
+  padding:80px 8%;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* OPTIONAL BACKGROUND EFFECT */
+
+.clients-section::before{
+  content:"";
+
+  position:absolute;
+
+  width:400px;
+  height:400px;
+
+  top:-180px;
+  right:-180px;
+
+  background:
+    radial-gradient(
+      rgba(13,110,253,0.12),
+      transparent 70%
+    );
+
+  z-index:0;
+}
+
+.clients-title{
+  position:relative;
+
+  z-index:2;
+
+  text-align:center;
+
+  color:#0d6efd;
+
+  margin-bottom:50px;
+
+  font-size:18px;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  font-weight:600;
+}
+
+.clients-grid{
+  position:relative;
+
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+  gap:25px;
+}
+
+/* CLIENT CARD */
+
+.client-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20,29,51,0.95),
+      rgba(15,23,42,0.95)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  padding:35px 25px;
+
+  text-align:center;
+
+  border-radius:20px;
+
+  font-size:22px;
+
+  font-weight:600;
+
+  color:#ffffff;
+
+  transition:0.35s ease;
+
+  position:relative;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* TOP ACCENT */
+
+.client-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0d6efd,
+      #00bfff
+    );
+}
+
+/* HOVER EFFECT */
+
+.client-card:hover{
+  transform:
+    translateY(-8px)
+    scale(1.02);
+
+  border-color:
+    rgba(13,110,253,0.35);
+
+  color:#4ea1ff;
+
+  box-shadow:
+    0 15px 40px rgba(13,110,253,0.12);
+}
+
+/* TABLET */
+
+@media(max-width:992px){
+
+  .clients-grid{
+    grid-template-columns:
+      repeat(auto-fit,minmax(180px,1fr));
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .clients-section{
+    padding:70px 5%;
+  }
+
+  .clients-title{
+    font-size:16px;
+
+    margin-bottom:40px;
+  }
+
+  .clients-grid{
+    gap:20px;
+  }
+
+  .client-card{
+    padding:28px 20px;
+
+    font-size:18px;
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+  .clients-grid{
+    grid-template-columns:1fr;
+  }
+
+  .client-card{
+    padding:25px 18px;
+
+    font-size:17px;
+  }
+
+}

@@ -1,0 +1,203 @@
+.faq-container{
+  max-width:950px;
+
+  margin:auto;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:24px;
+
+  position:relative;
+}
+
+/* FAQ CARD */
+
+.faq-item{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20,29,51,0.96),
+      rgba(15,23,42,0.96)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+  transition:0.35s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.2);
+
+  position:relative;
+}
+
+/* TOP ACCENT */
+
+.faq-item::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0d6efd,
+      #00bfff
+    );
+}
+
+/* HOVER */
+
+.faq-item:hover{
+  transform:translateY(-6px);
+
+  border-color:
+    rgba(13,110,253,0.35);
+
+  box-shadow:
+    0 15px 40px rgba(13,110,253,0.12);
+}
+
+/* QUESTION */
+
+.faq-question{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:20px;
+
+  padding:24px 28px;
+
+  cursor:pointer;
+}
+
+.faq-question h3{
+  font-size:21px;
+
+  font-weight:600;
+
+  color:white;
+
+  line-height:1.5;
+}
+
+/* ICON */
+
+.faq-question span{
+  min-width:45px;
+  min-height:45px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  border-radius:50%;
+
+  background:
+    rgba(13,110,253,0.12);
+
+  border:
+    1px solid rgba(13,110,253,0.2);
+
+  color:#4ea1ff;
+
+  font-size:26px;
+
+  transition:0.3s ease;
+}
+
+.faq-item.active .faq-question span{
+  transform:rotate(45deg);
+
+  background:
+    rgba(13,110,253,0.2);
+}
+
+/* ANSWER */
+
+.faq-answer{
+  max-height:0;
+
+  overflow:hidden;
+
+  transition:
+    max-height 0.45s ease;
+}
+
+.faq-answer p{
+  padding:
+    0 28px 28px;
+
+  color:#cbd5e1;
+
+  line-height:2;
+
+  font-size:16px;
+}
+
+.faq-item.active .faq-answer{
+  max-height:300px;
+}
+
+/* TABLET */
+
+@media(max-width:768px){
+
+  .faq-container{
+    gap:20px;
+  }
+
+  .faq-question{
+    padding:22px 20px;
+  }
+
+  .faq-question h3{
+    font-size:18px;
+  }
+
+  .faq-answer p{
+    padding:
+      0 20px 24px;
+
+    font-size:15px;
+
+    line-height:1.9;
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+  .faq-question{
+    align-items:flex-start;
+  }
+
+  .faq-question span{
+    min-width:40px;
+    min-height:40px;
+
+    font-size:22px;
+  }
+
+  .faq-question h3{
+    font-size:16px;
+    line-height:1.6;
+  }
+
+}
